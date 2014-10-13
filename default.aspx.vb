@@ -46,7 +46,7 @@ Partial Class _Default
         monthlyPayment = loanAmount * interestRate / (1 - Math.Pow((1 + interestRate), (-loanTerm)))
 
         'Displaying the monthly payment in the textbox and converts the variable to currency.
-        lblMonthlyPmt.Text = FormatCurrency(monthlyPayment)
+        lblMonthlyPmt.Text = "Monthly Payment: " & FormatCurrency(monthlyPayment)
 
 
         'Adds items to list box, formats them for currency and adds pad spacing for each item.
@@ -57,9 +57,12 @@ Partial Class _Default
         loanAmortTbl.Columns.Add("New Balance", System.Type.GetType("System.String"))
 
 
+
+        'Set the Calendar payment date
+        Dim calendarDate As Date = Now
+
         'This section uses the for loop to display the loan balance and interest paid over the term of the loan.
         Dim counterStart As Integer
-        Dim calendarDate As CalendarDay
 
         For counterStart = 1 To loanTerm
 
@@ -69,14 +72,17 @@ Partial Class _Default
             nBalance = loanAmount - principal
             loanAmount = nBalance
 
+            'Increment the calendar by one month
+            calendarDate = calendarDate.AddMonths(1)
+
+
             'Writes the data to a new row in the gridview.
             tRow = loanAmortTbl.NewRow()
             tRow("Payment Number") = String.Format(counterStart)
-            tRow("Payment Date") = String.Format("M/d/yyyy", calendarDate)
+            tRow("Payment Date") = String.Format("{0:d}", calendarDate)
             tRow("Principal Paid") = String.Format("{0:C}", principal) ' String.Format("{0:C},principal) formats the variable "prinicpal" as currency (C).
             tRow("Interest Paid") = String.Format("{0:C}", interestPaid)
             tRow("New Balance") = String.Format("{0:C}", nBalance)
-
             loanAmortTbl.Rows.Add(tRow)
 
             'Loops to next counterStart (Continues loop until counterStart requirements are met (loanTerm)).

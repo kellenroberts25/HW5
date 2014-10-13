@@ -17,12 +17,12 @@
      
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>&nbsp;&nbsp;&nbsp;
             <span>
-                <asp:RegularExpressionValidator ID="tbLoanAmount" runat="server"
+                <asp:RequiredFieldValidator ID="tbLoanAmount" runat="server"
                     ControltoValidate ="tbLoanAmt"
-                    ErrorMessage ="Please enter a valid Loan Amount"
-                    ValidationExpression ="^\d{1,10}$">
+                    ErrorMessage ="Please enter a valid Loan Amount">
 
-                </asp:RegularExpressionValidator>
+                </asp:RequiredFieldValidator>
+                  
             </span>
                   
 
@@ -31,8 +31,16 @@
         <br /><br />      
         
         Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
-        
         &nbsp;&nbsp;
+            <span>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                    ControltoValidate ="tbLoanAmt"
+                    ErrorMessage ="Please enter a valid Annual Interest %">
+
+                </asp:RequiredFieldValidator>
+                  
+            </span>
+
         <asp:Label ID="LoanInterestlbl" runat="server"></asp:Label>
         
         <br /><br />
@@ -40,6 +48,15 @@
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
         
         &nbsp;&nbsp;
+
+            <span>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                    ControltoValidate ="tbLoanAmt"
+                    ErrorMessage ="Please enter a valid Loan Term">
+
+                </asp:RequiredFieldValidator>
+                  
+            </span>
         <asp:Label ID="LoanTermErrorlbl" runat="server"></asp:Label>
         
         <br /><br />
@@ -52,7 +69,7 @@
         
         <br /><br />
                 
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        <asp:Label ID="lblMonthlyPmt" runat="server">Welcome to my mortgage calculator.  Please complete th fields about to have your monthly payment and loan repayment schedule calculated for you.</asp:Label>
         
         <br /><br />
         
