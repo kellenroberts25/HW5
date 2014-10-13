@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
     <div class="appborder">
     
-        <h1>Kellen's Mortgage Calculator</h1>
+        <h1 style="text-align:center;">Kellen's and/or Mike's Mortgage Calculator</h1>
         
         <br />
      
