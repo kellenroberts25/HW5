@@ -13,7 +13,7 @@
     
         <h1>Kellen's Mortgage Calculator</h1>
         
-        <br /><br />
+        <br />
      
         *Loan Amount:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>&nbsp;&nbsp;&nbsp;
             <span class="errormessage">
@@ -56,7 +56,7 @@
         
         <br />
         <br />
-        <div style="color:red;">*Required Fields</div><br />
+        <div style="color:red;">*Required Fields</div>
         <br />
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -69,7 +69,7 @@
         
         <br /><br />
                 
-        <asp:Label ID="lblMonthlyPmt" runat="server" CssClass="bold">Welcome to my mortgage calculator.  Please complete th fields about to have your monthly payment and loan repayment schedule calculated for you.</asp:Label>
+        <asp:Label ID="lblMonthlyPmt" runat="server" CssClass="bold">Welcome to my mortgage calculator.  Please complete the fields about to have your monthly payment and loan repayment schedule calculated for you.</asp:Label>
         
         <br /><br />
         
