@@ -15,15 +15,32 @@
         
         <br /><br />
      
-        Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
+        Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>&nbsp;&nbsp;&nbsp;
+            <span>
+                <asp:RegularExpressionValidator ID="tbLoanAmount" runat="server"
+                    ControltoValidate ="tbLoanAmt"
+                    ErrorMessage ="Please enter a valid Loan Amount"
+                    ValidationExpression ="^\d{1,10}$">
+
+                </asp:RegularExpressionValidator>
+            </span>
+                  
+
+        <asp:Label ID="LoanAmountErrorlbl" runat="server"></asp:Label>
                   
         <br /><br />      
         
         Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
         
+        &nbsp;&nbsp;
+        <asp:Label ID="LoanInterestlbl" runat="server"></asp:Label>
+        
         <br /><br />
 
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
+        
+        &nbsp;&nbsp;
+        <asp:Label ID="LoanTermErrorlbl" runat="server"></asp:Label>
         
         <br /><br />
 
