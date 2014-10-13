@@ -95,7 +95,7 @@ Partial Class _Default
 
     End Sub
 
-    Protected Sub btnCalcPmt0_Click(sender As Object, e As EventArgs) Handles btnCalcPmt0.Click
+    Protected Sub btnCalcPmt0_Click(sender As Object, e As EventArgs) Handles Clearbtn.Click
         'Clear all the textboxes
         tbLoanAmt.Text = String.Empty
         tbAnnualInterest.Text = String.Empty
@@ -103,9 +103,12 @@ Partial Class _Default
         lblMonthlyPmt.Text = String.Empty
 
         'Erase Grid
-        loanGridView.Columns.Clear()
 
+        loanGridView.DataSource = Nothing
+        loanGridView.DataBind()
 
+        'Display message
+        lblMonthlyPmt.Text = "Welcome to my mortgage calculator.  Please complete the fields about to have your monthly payment and loan repayment schedule calculated for you."
 
     End Sub
 End Class

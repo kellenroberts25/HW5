@@ -65,7 +65,7 @@
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <asp:Button ID="btnCalcPmt0" runat="server" Text="Clear" EnableTheming="True" Width="100px" CssClass="button" />
+        <asp:Button ID="Clearbtn" runat="server" Text="Clear" EnableTheming="True" Width="100px" CssClass="button" />
         
         <br /><br />
                 
