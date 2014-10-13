@@ -83,4 +83,13 @@ Partial Class _Default
 
     End Sub
 
+    Protected Sub btnCalcPmt0_Click(sender As Object, e As EventArgs) Handles btnCalcPmt0.Click
+        'Clear all the textboxes
+        tbLoanAmt.Text = String.Empty
+        tbAnnualInterest.Text = String.Empty
+        tbLoanTerm.Text = String.Empty
+
+        'Erase Grid
+
+    End Sub
 End Class
