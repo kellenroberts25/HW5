@@ -1,4 +1,8 @@
-body {background-color:FFFFCC;}
+body {background-color:#FFFFCC;}
+
+.errormessage {
+	color:red;
+}
 
 .bold {font-weight:bold; 
 	font-size:24px;}
@@ -17,7 +21,7 @@ body {background-color:FFFFCC;}
 .cssgridview td {
 		padding:10px;
 		border:solid 1px #c1c1c1;
-		color:#717171;
+		color:#383838;
 	}
 
 .cssgridview th {
@@ -28,4 +32,19 @@ body {background-color:FFFFCC;}
 		font-size:0.9em;
 }
 
-.cssgridview .alt {background-color: aqua;}
+.cssgridview .alt {background-color:#D0D0D0;}
+
+.button {
+		border-radius: 5px;
+		background-color: #888888;
+		border-color:black;
+}
+
+.appborder {
+		border: 3px solid black;
+		border-radius: 5px;
+		background: #CCFFFF;
+		padding: 10px;
+		width: 570px;
+		height:auto;
+		}
